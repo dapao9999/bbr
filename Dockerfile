@@ -2,11 +2,10 @@ FROM ubuntu
 
 MAINTAINER wtf
 
-COPY  *.* /root/
+COPY  * /root/
 
 RUN apt update \
-    && apt install -y iptables python-pip \
-    && pip install shadowsocks \
-    && chmod +x /root/bbr.sh 
+    && apt install -y iptables \
+    && chmod +x /root/bbr.sh /root/gost
 
 CMD  /root/bbr.sh
