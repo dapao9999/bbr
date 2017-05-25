@@ -14,6 +14,7 @@ export LKL_HIJACK_NET_IFPARAMS=tap0
 export LKL_HIJACK_NET_IP=10.0.0.2
 export LKL_HIJACK_NET_NETMASK_LEN=24
 export LKL_HIJACK_NET_GATEWAY=10.0.0.1
+export LKL_HIJACK_OFFLOAD="0x883"
 export LKL_HIJACK_DEBUG=1
 
 ssserver -p 443 -k password -m rc4-md5
