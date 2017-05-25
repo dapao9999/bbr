@@ -5,7 +5,7 @@ MAINTAINER wtf
 COPY  * /root/
 
 RUN apt update \
-    && apt install -y iptables \
+    && apt install -y iptables iproute2 \
     && chmod +x /root/bbr.sh /root/gost
 
 CMD  /root/bbr.sh
