@@ -18,4 +18,4 @@ export LKL_HIJACK_NET_GATEWAY=10.0.0.1
 export LKL_HIJACK_BOOT_CMDLINE="mem=100m"
 export LKL_HIJACK_DEBUG=0
 
-ssserver -p ${PORT:-443} -k ${PASSWORD:-password} -m ${METHOD:-rc4-md5}
+ss-server -p ${PORT:-443} -k ${PASSWORD:-password} -m ${METHOD:-chacha20-ietf-poly1305} -u
