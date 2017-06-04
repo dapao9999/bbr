@@ -16,6 +16,6 @@ export LKL_HIJACK_NET_IP=10.0.0.2
 export LKL_HIJACK_NET_NETMASK_LEN=24
 export LKL_HIJACK_NET_GATEWAY=10.0.0.1
 export LKL_HIJACK_BOOT_CMDLINE="mem=100m"
-export LKL_HIJACK_DEBUG=1
+export LKL_HIJACK_DEBUG=0
 
-ssserver -p 443 -k password -m rc4-md5
+ss-server -p ${PORT:-443} -k ${PASSWORD:-password} -m ${METHOD:-chacha20-ietf-poly1305} -u
