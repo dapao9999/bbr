@@ -9,7 +9,8 @@ RUN apt update \
     iptables \
     iproute2 \
     python-pip \
-    && pip install shadowsocks \
+    git \
+    && pip install git+https://github.com/shadowsocks/shadowsocks.git@master \
     && chmod +x /root/bbr.sh
 
 CMD  /root/bbr.sh
