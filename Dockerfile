@@ -8,9 +8,11 @@ RUN apt update \
     && apt install -y \
     iptables \
     iproute2 \
-    python-pip \
-    git \
-    && pip install git+https://github.com/shadowsocks/shadowsocks.git@master \
+    software-properties-common \
+    && add-apt-repository ppa:max-c-lv/shadowsocks-libev \
+    && apt update \
+    && apt install -y \
+    shadowsocks-libev \
     && chmod +x /root/bbr.sh
 
 CMD  /root/bbr.sh
