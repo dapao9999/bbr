@@ -5,14 +5,8 @@ MAINTAINER wtf
 COPY  *.* /root/
 
 RUN apt update \
-    && apt install -y \
-    iptables \
-    iproute2 \
-    software-properties-common \
-    && add-apt-repository ppa:max-c-lv/shadowsocks-libev \
-    && apt update \
-    && apt install -y \
-    shadowsocks-libev \
+    && apt install -y iptables python-pip \
+    && pip install shadowsocks \
     && chmod +x /root/bbr.sh
 
 CMD  /root/bbr.sh
