@@ -1,6 +1,4 @@
-FROM ubuntu
-
-MAINTAINER wtf
+FROM debian
 
 COPY  *.* /root/
 
