@@ -1,10 +1,10 @@
-FROM ubuntu:14.04
+FROM ubuntu
 
 COPY  *.* /root/
 
 RUN apt update \
-    && apt install -y iptables python-pip \
-    && pip install shadowsocks \
+    && apt install -y iptables python3-pip \
+    && pip3 install shadowsocks \
     && chmod +x /root/bbr.sh
 
 CMD  /root/bbr.sh
