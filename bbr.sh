@@ -18,4 +18,4 @@ export LKL_HIJACK_BOOT_CMDLINE="mem=100m"
 export LKL_HIJACK_DEBUG=1
 export LKL_HIJACK_NET_MTU=1280
 
-ss-server -p ${PORT:-443} -k ${PASSWORD:-password} -m ${METHOD:-rc4-md5} -v 
+ss-server -p ${PORT:-443} -k ${PASSWORD:-password} -m ${METHOD:-rc4-md5} -v
