@@ -1,8 +1,8 @@
 
 FROM ubuntu
 
-COPY  *.* /root/
+COPY  * /
 
-RUN apt update && apt install -y shadowsocks-libev iproute2 iptables
+RUN apt update && apt install -y shadowsocks-libev iproute2 iptables 
 
-CMD  /root/bbr.sh
+CMD /bbr.sh
